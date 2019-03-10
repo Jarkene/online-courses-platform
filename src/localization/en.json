@@ -1,0 +1,41 @@
+{
+    "aside": {
+        "menu": {
+            "home": "Home",
+            "user": "Private information",
+            "materials": "Materials",
+            "general_chat": "General chat",
+            "teacher_chat": "Teacher Chat",
+            "rating": "Rating",
+            "webinars": "Webinars",
+            "exit": "Exit"
+        }
+    },
+    "user": {
+        "name": "Input name...",
+        "phone": "Input phone...",
+        "email": "Input email...",
+        "github": "Input github link...",
+        "skype": "Input skype link..."
+    },
+    "chat": {
+        "input": "Input message..."
+    },
+    "main": {
+        "home": {
+            "ads": "Ads"
+        },
+        "user": {
+            "name": "Name",
+            "phone": "Phone",
+            "email": "Email",
+            "github": "Github link",
+            "skype": "Skype",
+            "save": "Save changes in profile"
+        },
+        "lesson": {
+            "materials": "Materials",
+            "hometask": "Hometask"
+        }
+    }
+}

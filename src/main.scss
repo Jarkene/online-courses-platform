@@ -1,0 +1,385 @@
+$mainFont: 'Segoe UI', sans-serif;
+$bgColor: #f5f5f5;
+$mainTextColor: #555;
+$headerColor: #333;
+$placeholderColor: #999;
+$blockShadow: 1px 1px 3px rgba(0, 0, 0, 0.335);
+$buttonColor: #369736;
+
+@font-face {
+    font-family: 'Segoe UI';
+    src: url('./assets/fonts/SegoeUI/SegoeUI.ttf'); 
+}
+
+/* APPLICATION */
+
+#app {
+    min-height: 100vh;
+    background-color: $bgColor;
+}
+* {
+    font-family: $mainFont;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul, li {
+    list-style: none;
+}
+img {
+    vertical-align: middle;
+}
+a {
+    text-decoration: none;
+    &:active {
+        text-decoration: underline;
+    }
+}
+.header {
+    background-color: white;
+    z-index: 0;
+    margin-left: 2px;
+}
+.shadow {
+    box-shadow: $blockShadow;
+}
+.main-text-color {
+    color: $mainTextColor;
+}
+.header-color {
+    color: $headerColor;
+}
+.placeholder-color {
+    color: $placeholderColor;
+}
+
+/* HOME */
+
+.app__home {
+    margin: 0;
+    padding: 20px 40px;
+}
+.app-home__main {
+    padding-top: 10px;
+}
+
+/* ADS */
+
+.ads__title {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+.ads-container {
+    background-color: white;
+}
+.app-ads__item {
+    color: $headerColor;
+    padding: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.233);
+}
+.ad__date {
+    color: $placeholderColor;
+}
+
+/* USER */
+
+.user__main {
+    background-color: white;
+    padding: 20px 20px;
+    margin: 20px 20px;
+}
+.user__data {
+    padding: 0 20px 20px 0;
+    display: flex;
+    align-items: flex-start;
+}
+.user-data__fieldset {
+    margin-left: 20px;
+}
+.input__block {
+    padding-bottom: 15px;
+
+    label {
+        color: $headerColor;
+        font-weight: bold;
+        font-size: 16px;
+    }
+}
+.user__input {
+    width: 80%;
+    border: none;
+    outline: none;
+    padding-bottom: 5px;
+    margin-top: 5px;
+    font-size: 16px;
+    color: $mainTextColor;
+    padding: 10px 5px;
+    border-radius: 5px;
+    border: 1px solid $placeholderColor;
+}
+.save-changes__button {
+    padding: 10px;
+    border: none;
+    background-color: white;
+    outline: none;
+    border-radius: 5px;
+    color: white;
+    background: $buttonColor;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+/* MATERIALS */
+
+.materials__main {
+    color: #333;
+    padding: 40px 40px;
+}
+.materials__list {
+    background-color: white;
+
+    li{
+        padding: 20px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.335);
+    }
+}
+.lesson__link {
+    transition: all 0.3s ease;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #ECF5FF;
+        color: rgb(1, 116, 192);
+    }
+}
+
+/* LESSON */
+
+.lesson__nav-icon {
+    font-size: 36px;
+}
+.lesson__main {
+    padding: 20px 40px;
+}
+.lesson-main__block {
+    margin-bottom: 30px;
+}
+iframe {
+    width: 100%;
+    height: 25vw;
+}
+.lesson__timecodes {
+    background-color: white;
+    box-shadow: $blockShadow;
+
+    li {
+        padding: 10px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.335);
+        transition: all 0.3s ease;
+
+        &:hover {
+            cursor: pointer;
+            background-color: #ECF5FF;
+            color: rgb(1, 116, 192);
+        }
+    }
+}
+.timecode {
+    margin-right: 10px;
+}
+.lesson__materials {
+    display: flex;
+    margin-bottom: 30px;
+
+    i {
+        position: relative;
+        top: 5px;
+    }
+}
+.materials__document-type {
+    margin-right: 10px;
+}
+.materials__title,
+.hometask__title {
+    margin-bottom: 15px;
+}
+.materials__document-title {
+    margin-bottom: 3px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+.materials__document-info {
+    color: $placeholderColor;
+}
+.fa-file-alt {
+    vertical-align: top;
+    margin-right: 10px;
+    font-size: 36px;
+    color: rgb(224, 160, 31);
+}
+
+/* CHAT */
+
+.el-main.chat__main {
+    height: calc(100vh - 80px);
+    padding: 0 !important;
+    margin-top: 20px;
+}
+.message__form {
+    border-radius: 5px;
+    padding: 10px;
+    height: 95px;
+    z-index: 2;
+    width: 100%;
+    position: relative;
+    top: calc(18vh - 95px);
+    background: white;
+}
+.chat__messages {
+    padding-top: 10px;
+    height: calc(82vh - 80px);
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar { width: 0; }
+}
+input::-webkit-input-placeholder {
+    font-size: 12px;
+}
+.message__input {
+    border-radius: 5px;
+    outline: none;
+    width: 85%;
+    background: none;
+    /* padding: 10px; */
+    font-size: 14px;
+}
+.send-message-btn {
+    background: white;
+    display: inline-block;
+    width: 14%;
+    margin-left: 1%;
+    border: none;
+    outline: none;
+    color: white;
+    background: $buttonColor;
+    padding: 11px 0px;
+    border-radius: 5px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+/* MESSAGE */
+
+.message {
+    color: #555;
+    display: flex;
+    align-items: flex-start;
+}
+.message__block {
+    font-size: 16px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.message__sender {
+    color: $headerColor;
+    font-weight: bold;
+}
+.message__main {
+    background: white;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.message__sender {
+    margin-bottom: 5px;
+}
+.message__info {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 12px;
+    color: $placeholderColor;
+}
+.message__date {
+    margin-right: 5px;
+}
+.message__photo {
+    border-radius: 50%;
+    width: 50px;
+}
+
+/* MY MESSAGE */
+
+.my-message {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    justify-self: right;
+}
+.my-message__block {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.my-message__text {
+    background-color: white;
+    color: $headerColor;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.my-message__info {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 12px;
+    color: $placeholderColor;
+}
+.my-message__date {
+    margin-right: 5px;
+}
+.message-photo {
+    border-radius: 50%;
+    width: 50px;
+}
+
+/* WEBINARS */
+
+.webinars__main {
+    padding: 40px 40px;
+}
+.webinar__title {
+    color: $headerColor;
+    margin-bottom: 5px;
+}
+.webinar__info {
+    padding: 15px;
+    background-color: white;
+}
+.webinar__date {
+    color: $placeholderColor;
+    font-size: 14px;
+    margin-right: 5px;
+}
+.webinar__time {
+    font-size: 14px;
+    color: $placeholderColor;
+}
+.webinar__description {
+    color: $mainTextColor;
+    margin: 15px 0;
+}
+.webinar__question-menu {
+    position: relative;
+    right: 7px;
+    
+    .el-col {
+        padding: 7px;
+        color: $mainTextColor;
+        font-weight: bold;
+        font-size: 16px;
+    }
+}
